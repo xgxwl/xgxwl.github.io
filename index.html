@@ -4,7 +4,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes"> 
 <meta name="robots" content="noindex,follow">
 <title>加载中</title>
-<meta http-equiv="refresh" content="2;url=https://viplsj.github.io">
+<meta http-equiv="refresh" content="1;url=https://viplsj.github.io">
 
 <style>
 body{font-weight:100;margin:0}body{-webkit-tap-highlight-color:transparent;background-color:#222428;font-size:100%;font-family:Open Sans;height:100%}.loader{top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-mos-transform:translate(-50%,-50%);transform:translate(-50%,-50%);text-align:center;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;width:80%;overflow:visible}.loader,.loader div{position:absolute;height:36px}.loader div{width:30px;margin:0 10px;opacity:0;animation:move 2s linear infinite;-o-animation:move 2s linear infinite;-moz-animation:move 2s linear infinite;-webkit-animation:move 2s linear infinite;transform:rotate(180deg);-o-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);color:#fff;font-size:3em}.loader div:nth-child(8):before{background:#db2f00}.loader div:nth-child(8):before,.loader div:nth-child(9):before{content:'';position:absolute;bottom:-15px;left:0;width:30px;height:30px;border-radius:100%}.loader div:nth-child(9):before{background:#f2f2f2}.loader div:nth-child(10):before{bottom:-15px;height:30px;background:#13a3a5}.loader div:after,.loader div:nth-child(10):before{content:'';position:absolute;left:0;width:30px;border-radius:100%}.loader div:after{bottom:-40px;height:5px;background:#39312d}.loader div:nth-child(2){animation-delay:.2s;-o-animation-delay:.2s;-moz-animation-delay:.2s;-webkit-animation-delay:.2s}.loader div:nth-child(3){animation-delay:.4s;-o-animation-delay:.4s;-webkit-animation-delay:.4s}.loader div:nth-child(4){animation-delay:.6s;-o-animation-delay:.6s;-moz-animation-delay:.6s;-webkit-animation-delay:.6s}.loader div:nth-child(5){animation-delay:.8s;-o-animation-delay:.8s;-moz-animation-delay:.8s;-webkit-animation-delay:.8s}.loader div:nth-child(6){animation-delay:1s;-o-animation-delay:1s;-moz-animation-delay:1s;-webkit-animation-delay:1s}.loader div:nth-child(7){animation-delay:1.2s;-o-animation-delay:1.2s;-moz-animation-delay:1.2s;-webkit-animation-delay:1.2s}.loader div:nth-child(8){animation-delay:1.4s;-o-animation-delay:1.4s;-moz-animation-delay:1.4s;-webkit-animation-delay:1.4s}.loader div:nth-child(9){animation-delay:1.6s;-o-animation-delay:1.6s;-moz-animation-delay:1.6s;-webkit-animation-delay:1.6s}.loader div:nth-child(10){animation-delay:1.8s;-o-animation-delay:1.8s;-moz-animation-delay:1.8s;-webkit-animation-delay:1.8s}@keyframes move{0%{right:0;opacity:0}35%{right:41%}35%,65%{-webkit-transform:rotate(0);transform:rotate(0);opacity:1}65%{right:59%}to{right:100%;-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}}@-webkit-keyframes move{0%,to{opacity:0}0%{right:0}35%{right:41%}35%,75%{-webkit-transform:rotate(0);transform:rotate(0);opacity:1}75%{right:59%}to{right:100%;-webkit-transform:rotate(-180deg);transform:rotate(-180deg);opacity:0}}
@@ -28,4 +28,71 @@ body{font-weight:100;margin:0}body{-webkit-tap-highlight-color:transparent;backg
     </div>
     
 </body>
+<style>
+	.debug {
+		font-size: 18px;
+		position: fixed;
+		right: .5em;
+		bottom: 1em;
+		max-width: 95vw;
+		display: flex;
+		color: rgb(85,119,182,0);
+		font-weight: bold;
+		cursor: pointer;
+		border: solid;
+		transition: all 1s;
+		z-index: 99999999;
+	}
+	.debug-logo, .debug-text{
+		float: right;
+		height: 2em;
+		background-color: rgb(255,255,255,0);
+		transition: all 1s;
+	}
+	.debug-text{
+		line-height: 2em;
+		color: rgb(85,119,182,0);
+		white-space: nowrap;
+		overflow: auto;
+		width: auto;
+		max-width: 0;
+	}
+</style>
+<div id='DEBUG-OPEN' class='debug'>
+	<div id='DEBUG-LOGO' class='debug-logo'>
+		<svg class="icon" viewBox="0 0 1024 1024" p-id="2676" width="2em" height="2em"><path d="M959.9 310.4c2-43-4-86.1-17.7-127-22-52.2-66.2-91.8-120.4-108C786.4 66.6 750 62.7 713.5 64H310.4c-36.4-1.3-72.9 2.6-108.3 11.4-54.2 16.2-98.4 55.8-120.4 108-13.6 40.9-19.7 83.9-17.7 127v403.1c-1.9 43.1 4.1 86.1 17.7 127 22 52.2 66.2 91.8 120.4 108 35.4 8.8 71.8 12.7 108.3 11.4h403.1c36.4 1.3 72.9-2.6 108.3-11.4 54.2-16.2 98.4-55.8 120.4-108 13.6-40.9 19.7-83.9 17.7-127V310.4zM241.7 680h-33.3V481h33.3v199zM225 447.4c-11.4-0.1-20.6-9.4-20.5-20.9 0.1-11.4 9.4-20.6 20.9-20.5 11.3 0.1 20.5 9.3 20.5 20.7-0.1 11.5-9.4 20.8-20.9 20.7zM425.1 685c-87.9 0-143.3-62.8-143.3-162.7s55.3-162.9 143.3-162.9 143.5 63 143.5 162.9S513.3 685 425.1 685z m290.2 0c-66 0-112.4-36.4-115.7-90.8h30c3.3 37.9 38.9 63.6 88.4 63.6 47.3 0 81.2-25.8 81.2-61.2 0-29.5-20.4-47-67.2-58.8l-39.2-10.1c-58.4-14.9-84.4-39.6-84.4-81.2 0-51 45.9-87.3 108-87.3 61.6 0 106.4 36.4 108.3 86.4h-30c-2.8-35.6-34.4-59.3-79.2-59.3-43.7 0-76.1 24.3-76.1 59 0 27.1 19.6 43.1 66 54.9l34.2 8.8c63.4 16 90.1 40.3 90.1 84.2 0.1 55.5-44.6 91.8-114.4 91.8zM425.1 387.1c-69.1 0-112.6 52.3-112.6 135.2S356 657.2 425.1 657.2 538 604.9 538 522.3s-43.7-135.2-112.9-135.2z" p-id="2677" fill="#5577b6"></path></svg>
+	</div>
+	<div id="DEBUG-TEXT" class='debug-text'>
+		&nbsp;
+		如果无法访问
+		请使用VPN网络
+		&nbsp;
+	</div>
+</div>
+
+<script type="text/javascript">
+	LOGO = document.getElementById('DEBUG-LOGO');
+	TEXT = document.getElementById('DEBUG-TEXT');
+	function Open(){
+		OPEN = document.getElementById('DEBUG-OPEN');
+		OPEN.onclick=function(e){			OPEN.style.cssText='color:rgb(85,119,182,1)';
+			LOGO.style.cssText='background-color:rgb(255,255,255,1)';
+			TEXT.style.cssText='background-color:rgb(255,255,255,1);color:rgb(85,119,182,1);max-width:20em';
+			OPEN.id='DEBUG-CLOSE';
+			Close();
+		}
+	}
+	function Close(){
+		CLOSE = document.getElementById('DEBUG-CLOSE');
+		CLOSE.onclick=function(e){
+			TEXT.style.cssText='background-color:rgb(255,255,255,0);color:rgb(85,119,182,0);max-width:0';
+			LOGO.style.cssText='background-color:rgb(255,255,255,0)';
+			OPEN.style.cssText='color:rgb(85,119,182,0)';
+			CLOSE.id='DEBUG-OPEN';
+			Open();
+		}
+	}
+	Open();
+</script>
+
 </html>
